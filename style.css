@@ -1,0 +1,223 @@
+:root {
+        --background-color: #121212;
+        --header-color: #1F1F1F;
+        --color-one: #D1D5DB;
+        --color-two: #F3F4F6;
+        --color-three: #B3B3B3;
+        --color-four: #3B82F6;
+        --anchor-color1: #FACC15;
+        --anchor-color2: #F97316;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    background-color: var(--background-color);
+}
+h1,  h2, h3, h4, a {
+    font-family: "Poppins", sans-serif;
+}
+h1 {
+    color: var(--color-two);
+}
+h2, h3, h4 {
+    color: var(--color-four);
+}
+p, blockquote {
+    font-family: "Open sans", sans-serif;
+    color: var(--color-one);
+}
+.medsos-anchor a {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+    /* edit bagian header dan childnya */
+
+header {
+    width: 100%;
+    height: 3.75rem;
+    background-color: var(--header-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 0 0.1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+#logo {
+    width: 18rem;
+    aspect-ratio: 6/1;
+    cursor: pointer;
+}
+header ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 28.125rem;
+}
+header li {
+    list-style: none;
+} 
+header nav a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--anchor-color2);
+    transition: 0.2s;
+}
+header nav a:hover {
+    text-decoration: underline;
+    color: var(--anchor-color1);
+}
+
+/* edit bagian main dan childnya */
+
+
+section {
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+    padding: 8rem 2rem 0 2rem;
+}
+section h2 {
+    color: var(--color-four);
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 30rem;
+}
+section h1 {
+    color: var(--color-two);
+    font-size: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+section p {
+    color: var(--color-one);
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+section .medsos p {
+    color: var(--color-three);
+}
+#about-me {
+    padding: 4rem 2rem 0 2rem;
+    height: 100vh;
+}
+.pengenalan p {
+    width: 60%;
+    margin-bottom: 5rem;
+}
+.wadah-progress {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.progress {
+    width: 80%;
+    height: 1rem;
+    background-color: var(--color-two);
+    border-radius: 10px;
+    padding: 0.05rem;
+}
+.progress .bar {
+    background-color: #F97316;
+}
+.satu .bar {
+    width: 80%;
+    height: 0.9rem;
+    border-radius: 10px 0 0 10px;
+}
+.dua .bar {
+    width: 5%;
+    height: 0.9rem;
+    border-radius: 10px 0 0 10px;
+}
+.emoji svg {
+    width: 10rem;
+}
+.gambar2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: flex-start;
+}
+.gambar2 img {
+    width: 15rem;
+    clip-path: circle(40% at 50% 50%);
+    border: 2px solid var(--color-three);
+}
+figure figcaption {
+    text-align: center;
+    color: var(--color-two);
+}
+#portfolio {
+    padding-top: 4rem;
+    height: 150vh;
+}
+#portfolio h2 {
+    margin-bottom: 6rem;
+}
+
+/* edit footer dan childnya */
+
+footer {
+    width: 100%;
+    height: 30vh;
+    background-color: var(--header-color);
+}
+
+
+
+
+@media (max-width: 834px) {
+    #logo {
+        width: 9.375rem;
+        aspect-ratio: 6/1;
+    }
+    section {
+        padding-left: 1.5rem;
+    }
+    header ul {
+        display: none;
+        justify-content: space-evenly;
+        width: 28.125rem;
+    }
+    .pengenalan p {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .gambar2 {
+        gap: 0.2rem;
+    }
+    .gambar2 img {
+        width: 10rem;
+        clip-path: circle(40% at 50% 50%);
+    }
+    #about-me {
+        padding: 4rem 2rem 0 1.5rem;
+    }
+
+}
+@media (max-width: 320px) {
+    header {
+        height: 2.7rem;
+        padding-left: 0.05rem;
+        padding-right: 0.2rem;
+    }
+    header .medsos-anchor svg {
+        width: 1.4rem;
+    }
+    header .medsos-anchor a {
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+    }
+}
+
